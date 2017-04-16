@@ -5,6 +5,8 @@
       class="CurrentUser--photo"
     />
     <div class="CurrentUser--identification">
+      <h3>{{ user.displayName }}</h3>
+      <p>{{ user.email }}</p>    
       <button @click='signOut'>
         Sign Out
       </button>
@@ -26,3 +28,19 @@
     ],
   };
 </script>
+<style>
+.CurrentUser {
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.CurrentUser--identification {
+  padding: 1em;
+  flex: 1;
+}
+
+.CurrentUser--photo {
+  max-height: 150px;
+}
+</style>
